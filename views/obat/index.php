@@ -14,12 +14,12 @@
 	$no=1;
 	if($model->length){
 		foreach ($model->data as $value) {
-			$penyakit = $penyakit($value['penyakitID']);
+			$p = $penyakit($value['penyakitID']);
 	?>
 	<tr>
 		<td><?=$no;$no++;?></td>
 		<td><?=$value['nama_obat'];?></td>
-		<td><?=$penyakit->nama_penyakit;?></td>
+		<td><?=$p->nama_penyakit;?></td>
 		<td><?=$value['stok'];?></td>
 		<td>
 			<button class="btn" onclick="location='<?=URL;?>/obat/edit?id=<?=$value['obatID'];?>'"><i class="fa fa-pencil"></i> Edit</button>
